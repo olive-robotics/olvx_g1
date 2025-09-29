@@ -38,6 +38,7 @@ fi
 echo "Launching navigation with map: ${MAP_FILE}"
 
 # Start the navigation launch (in the foreground)
-exec ros2 launch linorobot2_navigation navigation.launch.py \
-  map:="${MAP_FILE}"
+ros2 launch linorobot2_navigation navigation.launch.py map:="${MAP_FILE}" &
+ros2 launch waypoint_server waypoint_server.launch.py &
 
+wait
