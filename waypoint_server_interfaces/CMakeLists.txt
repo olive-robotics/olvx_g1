@@ -15,6 +15,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MoveToWaypoint.srv"
   "srv/ListWaypoints.srv"
   "srv/DeleteWaypoint.srv"
+  "srv/SaveWaypointPose.srv"
   DEPENDENCIES geometry_msgs
  )
 
